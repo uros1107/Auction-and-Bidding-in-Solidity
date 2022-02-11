@@ -1,0 +1,47 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "module": "CommonJS",
+        "target": "es5",
+        "declaration": true,
+        "lib": [
+            "es6",
+            "dom",
+            "esnext"
+        ],
+        "sourceMap": true,
+        "allowJs": false,
+        "jsx": "react",
+        "moduleResolution": "node",
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": false,
+        "strictNullChecks": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "noUnusedLocals": false,
+        "experimentalDecorators": true,
+        "noEmit": false,
+        "inlineSources": true,
+        "downlevelIteration": true
+    },
+    "exclude": [
+        "node_modules",
+        "build",
+        "scripts",
+        "acceptance-tests",
+        "webpack",
+        "jest",
+        "@types/jest",
+        "src/setupTests.ts",
+        "src/tests",
+        "migrations",
+        "dist",
+        "truffle-js",
+        "truffle.js",
+        "app.js"
+    ],
+    "include": [
+        "./src/**/*"
+    ]
+}

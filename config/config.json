@@ -1,0 +1,8 @@
+{
+    "web3": "https://rinkeby.infura.io/[INFURA_KEY]",
+    "privateKey": "",
+    "networkId": 4,
+    "gasPrice": 20000000000,
+    "hubAddress": "",
+    "votingAddress": ""
+}

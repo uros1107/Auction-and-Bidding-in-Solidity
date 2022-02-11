@@ -1,0 +1,61 @@
+{
+  "name": "auction",
+  "version": "0.1.0",
+  "private": true,
+  "description": "simple solidity auction implementation",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start:old": "babel-node app.js",
+    "start": "./node_modules/.bin/ts-node src/server.ts",
+    "dev": "nodemon node_modules/.bin/ts-node src/server.ts",
+    "test": "jest --watch",
+    "dist": "copyfiles -u 2 build/contracts/**/* src/artifacts && soltsice ./src/artifacts ./src/contracts && tsc && copyfiles -u 2 src/artifacts/**/* dist/artifacts",
+    "deploy:auction": "./node_modules/.bin/ts-node src/deploy.auction.ts",
+    "deploy:voting": "./node_modules/.bin/ts-node src/deploy.voting.ts"
+  },
+  "author": "Victor Baybekov",
+  "license": "MIT",
+  "dependencies": {
+    "@types/jest": "^21.1.8",
+    "@types/node": "^8.0.53",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-spread": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "bignumber.js": "^4.1.0",
+    "cross-env": "^5.1.1",
+    "debug": "^3.1.0",
+    "ethereumjs-tx": "^1.3.3",
+    "ethereumjs-util": "^5.1.2",
+    "fastify": "^0.35.2",
+    "jest": "^21.2.1",
+    "nodemon": "^1.12.1",
+    "soltsice": "^0.11.4",
+    "ts-jest": "^21.2.3",
+    "tslint": "^5.8.0",
+    "web3": "^1.0.0-beta.26"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testMatch": [
+      "<rootDir>/src/test/*.ts"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  },
+  "devDependencies": {
+    "copyfiles": "^1.2.0",
+    "ganache-cli": "^6.0.3",
+    "ts-node": "^5.0.0",
+    "typescript": "^2.6.2",
+    "zeppelin-solidity": "^1.4.0"
+  }
+}
